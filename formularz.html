@@ -1,0 +1,59 @@
+<html>
+<head>
+</head>
+<body>
+1:
+<input type="text" id = "jeden" onkeyup="sprawdz()"> <br>
+2:
+<input type="text" id = "dwa" onkeyup="sprawdz1()"> <br>
+3:
+<input type="text" id = "trzy" onkeyup="sprawdz2()"> <br>
+4:
+<input type="text" id = "cztery" onkeyup="sprawdz3()"> <br>
+
+
+<script type="text/javascript">
+        function sprawdz(){
+            var jeden1 = document.getElementById("jeden").value;
+            if (jeden1.match(/^<.+?>$/)){
+				document.getElementById("jeden").style.backgroundColor='green';   
+				}
+				else
+				{
+				document.getElementById("jeden").style.backgroundColor='red';
+				}}
+				
+		function sprawdz1(){
+			var dwa1 = document.getElementById("dwa").value;
+				 if (dwa1.match(/^https://[a-z0-9-]+(\.[a-z0-9-]+)+([/?].*)$/)){
+				document.getElementById("dwa").style.backgroundColor='green';   
+				}
+				else
+				{
+				document.getElementById("dwa").style.backgroundColor='red';
+				}}
+				
+			function sprawdz2(){	
+			var trzy1 = document.getElementById("trzy").value;
+			if (trzy1.match(/^(+|-)[0-9]+$/)){
+				document.getElementById("trzy").style.backgroundColor='green';   
+				}
+				else
+				{
+				document.getElementById("trzy").style.backgroundColor='red';
+				}}
+				
+			function sprawdz3(){
+			var cztery1 = document.getElementById("cztery").value;
+			if (cztery1.match(/^(+|-)[0-9]+\.[0-9]+||(+|-)[0-9]+$/)){
+				document.getElementById("cztery").style.backgroundColor='green';   
+				}
+				else
+				{
+				document.getElementById("cztery").style.backgroundColor='red';
+				}}
+				
+    </script>
+
+</body>
+</html>
